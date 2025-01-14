@@ -10,7 +10,7 @@ export function Note({ onDelete }) {
 
   const handleSave = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/notes", {
+      const response = await fetch("https://hlar-poznamky-server.onrender.com:5000//api/notes", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -18,7 +18,7 @@ export function Note({ onDelete }) {
         body: JSON.stringify({
           title: note.title,
           markdown: note.markdown,
-          tags: note.tags.map(tag => tag.label),  // Assuming tags are objects with labels
+          tags: note.tags.map(tag => tag.label),
         }),
       });
 

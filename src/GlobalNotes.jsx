@@ -21,7 +21,7 @@ export function GlobalNotes() {
     const fetchNotes = async () => {
       try {
         console.log('Fetching notes...')
-        const response = await fetch('http://localhost:5000/api/notes')
+        const response = await fetch('https://hlar-poznamky-server.onrender.com:5000//api/notes')
         if (!response.ok) {
           throw new Error('Failed to fetch notes')
         }
@@ -173,7 +173,7 @@ export function GlobalNoteView() {
   useEffect(() => {
     const fetchNote = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/api/notes/${id}`)
+        const response = await fetch(`https://hlar-poznamky-server.onrender.com:5000//api/notes/${id}`)
         if (!response.ok) {
           throw new Error('Failed to fetch note')
         }
