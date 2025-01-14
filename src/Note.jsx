@@ -10,7 +10,7 @@ export function Note({ onDelete }) {
 
   const handleSave = async () => {
     try {
-      const response = await fetch("https://hlar-poznamky-server.onrender.com:5000//api/notes", {
+      const response = await fetch("https://hlar-poznamky-server.onrender.com/api/notes", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
