@@ -78,7 +78,7 @@ function App() {
       <TopNav />
       <Routes>
         <Route
-          path="/"
+          path="/hlar-poznamky/"
           element={
             <NoteList
               notes={notesWithTags}
@@ -89,7 +89,7 @@ function App() {
           }
         />
         <Route
-          path="/new"
+          path="/hlar-poznamky/new"
           element={
             <NewNote
               onSubmit={onCreateNote}
@@ -98,10 +98,10 @@ function App() {
             />
           }
         />
-        <Route path="/:id" element={<NoteLayout notes={notesWithTags} />}>
+        <Route path="/hlar-poznamky/:id" element={<NoteLayout notes={notesWithTags} />}>
           <Route index element={<Note onDelete={onDeleteNote} />} />
           <Route
-            path="edit"
+            path="/hlar-poznamky/edit"
             element={
               <EditNote
                 onSubmit={onUpdateNote}
@@ -111,11 +111,11 @@ function App() {
             }
           />
         </Route>
-        <Route path="/global" element={<GlobalNotes />}></Route>
-        <Route path="/global/:id" element={<GlobalNoteView />} />
-        <Route path="/favorite" element={<FavoriteNotes />}></Route>
-        <Route path="/contact" element={<ContactPage />}></Route>
-        <Route path="*" element={<Navigate to="/" />} />
+        <Route path="/hlar-poznamky/global" element={<GlobalNotes />}></Route>
+        <Route path="/hlar-poznamky/global/:id" element={<GlobalNoteView />} />
+        <Route path="/hlar-poznamky/favorite" element={<FavoriteNotes />}></Route>
+        <Route path="/hlar-poznamky/contact" element={<ContactPage />}></Route>
+        <Route path="*" element={<Navigate to="/hlar-poznamky/" />} />
       </Routes>
     </Container>
   )
